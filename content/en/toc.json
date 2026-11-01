@@ -1,0 +1,466 @@
+{
+ "groups": [
+  {
+   "title": "Basics",
+   "topics": [
+    "basics",
+    "phone",
+    "just-type",
+    "launcher",
+    "accounts",
+    "exhibition",
+    "print-manager",
+    "android-apps"
+   ]
+  },
+  {
+   "title": "Communication",
+   "topics": [
+    "email",
+    "messaging",
+    "chat-apps",
+    "video-calls"
+   ]
+  },
+  {
+   "title": "Personal Information",
+   "topics": [
+    "calendar",
+    "contacts",
+    "tasks",
+    "clock",
+    "authenticator",
+    "weather"
+   ]
+  },
+  {
+   "title": "Media",
+   "topics": [
+    "photos",
+    "music",
+    "videos",
+    "camera",
+    "sound-recorder"
+   ]
+  },
+  {
+   "title": "Documents",
+   "topics": [
+    "pdf",
+    "memos",
+    "calculator",
+    "documents",
+    "files"
+   ]
+  },
+  {
+   "title": "Preferences",
+   "topics": [
+    "sounds-and-ringtones",
+    "screen-and-lock",
+    "text-assist",
+    "date-and-time",
+    "regional-settings",
+    "notifications",
+    "appearance",
+    "security",
+    "tweaks"
+   ]
+  },
+  {
+   "title": "Web and Wireless",
+   "topics": [
+    "web",
+    "location-services",
+    "maps",
+    "wi-fi",
+    "tethering",
+    "vpn",
+    "bluetooth",
+    "network"
+   ]
+  },
+  {
+   "title": "Maintenance",
+   "topics": [
+    "device-info",
+    "backup",
+    "software-manager",
+    "system-updates",
+    "sim-toolkit",
+    "storage",
+    "utilities"
+   ]
+  }
+ ],
+ "topics": {
+  "basics": {
+   "title": "Basics",
+   "group": "Basics",
+   "id": "basics",
+   "app": "basics"
+  },
+  "phone": {
+   "title": "Phone",
+   "group": "Basics",
+   "id": "phone",
+   "app": "phone"
+  },
+  "just-type": {
+   "title": "Just Type",
+   "group": "Basics",
+   "id": "just-type",
+   "app": "universalsearch"
+  },
+  "launcher": {
+   "title": "Launcher",
+   "group": "Basics",
+   "id": "launcher",
+   "app": "launcher"
+  },
+  "accounts": {
+   "title": "Accounts",
+   "group": "Basics",
+   "id": "accounts",
+   "app": "accountsmgr"
+  },
+  "exhibition": {
+   "title": "Exhibition",
+   "group": "Basics",
+   "id": "exhibition",
+   "app": "exhibition"
+  },
+  "email": {
+   "title": "Email",
+   "group": "Communication",
+   "id": "email",
+   "app": "email"
+  },
+  "messaging": {
+   "title": "Messaging",
+   "group": "Communication",
+   "id": "messaging",
+   "app": "messaging"
+  },
+  "calendar": {
+   "title": "Calendar",
+   "group": "Personal Information",
+   "id": "calendar",
+   "app": "calendar"
+  },
+  "contacts": {
+   "title": "Contacts",
+   "group": "Personal Information",
+   "id": "contacts",
+   "app": "contacts"
+  },
+  "tasks": {
+   "title": "Tasks",
+   "group": "Personal Information",
+   "id": "tasks",
+   "app": "tasks"
+  },
+  "clock": {
+   "title": "Clock",
+   "group": "Personal Information",
+   "id": "clock",
+   "app": "clock"
+  },
+  "photos": {
+   "title": "Photos",
+   "group": "Media",
+   "id": "photos",
+   "app": "photos"
+  },
+  "music": {
+   "title": "Music",
+   "group": "Media",
+   "id": "music",
+   "app": "music"
+  },
+  "videos": {
+   "title": "Videos",
+   "group": "Media",
+   "id": "videos",
+   "app": "video"
+  },
+  "pdf": {
+   "title": "PDF",
+   "group": "Documents",
+   "id": "pdf",
+   "app": "pdf_view"
+  },
+  "memos": {
+   "title": "Memos",
+   "group": "Documents",
+   "id": "memos",
+   "app": "memos"
+  },
+  "calculator": {
+   "title": "Calculator",
+   "group": "Documents",
+   "id": "calculator",
+   "app": "calculator"
+  },
+  "sounds-and-ringtones": {
+   "title": "Sounds & Ringtones",
+   "group": "Preferences",
+   "id": "sounds-and-ringtones",
+   "app": "sounds_ringtones"
+  },
+  "screen-and-lock": {
+   "title": "Screen & Lock",
+   "group": "Preferences",
+   "id": "screen-and-lock",
+   "app": "screen"
+  },
+  "text-assist": {
+   "title": "Text Assist",
+   "group": "Preferences",
+   "id": "text-assist",
+   "app": "textassist"
+  },
+  "date-and-time": {
+   "title": "Date & Time",
+   "group": "Preferences",
+   "id": "date-and-time",
+   "app": "date_time"
+  },
+  "regional-settings": {
+   "title": "Regional Settings",
+   "group": "Preferences",
+   "id": "regional-settings",
+   "app": "language"
+  },
+  "web": {
+   "title": "Web",
+   "group": "Web and Wireless",
+   "id": "web",
+   "app": "web"
+  },
+  "location-services": {
+   "title": "Location Services",
+   "group": "Web and Wireless",
+   "id": "location-services",
+   "app": "location"
+  },
+  "maps": {
+   "title": "Maps",
+   "group": "Web and Wireless",
+   "id": "maps",
+   "app": "maps"
+  },
+  "wi-fi": {
+   "title": "Wi-Fi",
+   "group": "Web and Wireless",
+   "id": "wi-fi",
+   "app": "wifi"
+  },
+  "tethering": {
+   "title": "Tethering",
+   "group": "Web and Wireless",
+   "id": "tethering",
+   "app": "mobilehotspot"
+  },
+  "vpn": {
+   "title": "VPN",
+   "group": "Web and Wireless",
+   "id": "vpn",
+   "app": "vpn"
+  },
+  "bluetooth": {
+   "title": "Bluetooth",
+   "group": "Web and Wireless",
+   "id": "bluetooth",
+   "app": "bluetooth"
+  },
+  "device-info": {
+   "title": "Device Info",
+   "group": "Maintenance",
+   "id": "device-info",
+   "app": "device_info"
+  },
+  "backup": {
+   "title": "Backup",
+   "group": "Maintenance",
+   "id": "backup",
+   "app": "backup"
+  },
+  "software-manager": {
+   "title": "Software Manager",
+   "group": "Maintenance",
+   "id": "software-manager",
+   "app": "softwaremgr"
+  },
+  "system-updates": {
+   "title": "System Updates",
+   "group": "Maintenance",
+   "id": "system-updates",
+   "app": "updates"
+  },
+  "sim-toolkit": {
+   "title": "SIM Toolkit",
+   "group": "Maintenance",
+   "id": "sim-toolkit",
+   "app": "simtoolkit"
+  },
+  "print-manager": {
+   "title": "Print Manager",
+   "group": "Basics",
+   "id": "print-manager",
+   "app": "Print_Manager"
+  },
+  "chat-apps": {
+   "title": "Chat Apps",
+   "group": "Communication",
+   "id": "chat-apps",
+   "app": "chat-apps"
+  },
+  "video-calls": {
+   "title": "Video Calls",
+   "group": "Communication",
+   "id": "video-calls",
+   "app": "video-calls"
+  },
+  "camera": {
+   "title": "Camera",
+   "group": "Media",
+   "id": "camera",
+   "app": "camera"
+  },
+  "sound-recorder": {
+   "title": "Sound Recorder",
+   "group": "Media",
+   "id": "sound-recorder",
+   "app": "sound-recorder"
+  },
+  "documents": {
+   "title": "Documents",
+   "group": "Documents",
+   "id": "documents",
+   "app": "documents"
+  },
+  "files": {
+   "title": "LuneOS Explorer",
+   "group": "Documents",
+   "id": "files",
+   "app": "files"
+  },
+  "authenticator": {
+   "title": "Authenticator",
+   "group": "Personal Information",
+   "id": "authenticator",
+   "app": "authenticator"
+  },
+  "weather": {
+   "title": "Weather",
+   "group": "Personal Information",
+   "id": "weather",
+   "app": "weather"
+  },
+  "network": {
+   "title": "Network",
+   "group": "Web and Wireless",
+   "id": "network",
+   "app": "network"
+  },
+  "notifications": {
+   "title": "Notifications",
+   "group": "Preferences",
+   "id": "notifications",
+   "app": "notifications"
+  },
+  "appearance": {
+   "title": "Appearance",
+   "group": "Preferences",
+   "id": "appearance",
+   "app": "appearance"
+  },
+  "security": {
+   "title": "Security",
+   "group": "Preferences",
+   "id": "security",
+   "app": "security"
+  },
+  "tweaks": {
+   "title": "Tweaks",
+   "group": "Preferences",
+   "id": "tweaks",
+   "app": "tweaks"
+  },
+  "android-apps": {
+   "title": "Android Applications",
+   "group": "Basics",
+   "id": "android-apps",
+   "app": "android-apps"
+  },
+  "storage": {
+   "title": "Storage",
+   "group": "Maintenance",
+   "id": "storage",
+   "app": "storage"
+  },
+  "utilities": {
+   "title": "Utilities",
+   "group": "Maintenance",
+   "id": "utilities",
+   "app": "utilities"
+  }
+ },
+ "featured": [
+  "basics/front-view",
+  "basics/shut-down-your-device",
+  "basics/copy-files-between-your-device-and-your-computer",
+  "basics/display-card-view-minimize-an-application",
+  "basics/open-an-application-in-the-launcher",
+  "basics/open-the-application-menu",
+  "basics/open-the-connection-menu",
+  "basics/go-up-one-level-in-an-app-back-gesture",
+  "phone/dial-by-contact-name-using-just-type",
+  "basics/save-information",
+  "basics/use-the-onscreen-keyboard",
+  "basics/use-the-system-menu",
+  "wi-fi/connect-to-a-new-open-network",
+  "print-manager/add-a-printer"
+ ],
+ "legacy": {
+  "accountsmgr": "accounts",
+  "palm_acct": "accounts",
+  "basics": "basics",
+  "bluetooth": "bluetooth",
+  "web": "web",
+  "calculator": "calculator",
+  "calendar": "calendar",
+  "device_info": "device-info",
+  "clock": "clock",
+  "contacts": "contacts",
+  "data_transfer": "basics",
+  "date_time": "date-and-time",
+  "email": "email",
+  "exhibition": "exhibition",
+  "language": "regional-settings",
+  "location": "location-services",
+  "messaging": "messaging",
+  "music": "music",
+  "memos": "memos",
+  "notes": "memos",
+  "pdf_view": "pdf",
+  "phone": "phone",
+  "photos": "photos",
+  "video": "videos",
+  "print_manager": "print-manager",
+  "screen": "screen-and-lock",
+  "searchpreferences": "just-type",
+  "universalsearch": "just-type",
+  "launcher": "launcher",
+  "sounds_ringtones": "sounds-and-ringtones",
+  "softwaremgr": "software-manager",
+  "tasks": "tasks",
+  "textassist": "text-assist",
+  "updates": "system-updates",
+  "backup": "backup",
+  "vpn": "vpn",
+  "wifi": "wi-fi",
+  "youtube": "videos"
+ }
+}

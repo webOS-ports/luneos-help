@@ -1,0 +1,4 @@
+markdown==3.11.2
+markdownify==1.2.3
+beautifulsoup4==4.15.0
+html5lib==1.1

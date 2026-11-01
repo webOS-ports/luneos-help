@@ -1,0 +1,138 @@
+@font-face{font-family:Prelude;src:url(fonts/prelude-light.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:Prelude;src:url(fonts/prelude-regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Prelude;src:url(fonts/prelude-bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Prelude;src:url(fonts/prelude-black.woff2) format("woff2");font-weight:900;font-display:swap}
+
+:root{
+  --paper:#F4F8FC;--card:#FFFFFF;--ink:#00123A;--soft:#51617C;--rule:#DBE4F0;
+  --blue:#1685E8;--link:#0B5CC0;--wash:#EAF4FE;--bar:#00123A;--pill:#3A3C3E;--pill-hi:#4A4C4E;
+  --wall:linear-gradient(170deg,#0B5CC0 0%,#063A8C 48%,#00123A 100%);
+  --sans:Prelude,"Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#061A40;--card:#0C2553;--ink:#EAF2FC;--soft:#A9BAD4;--rule:#1F3A6B;
+  --link:#7CC0FB;--wash:#102C5E;color-scheme:dark;
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-weight:300;line-height:1.12;margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+
+/* The bar and pill are the LuneOS status bar and app menu */
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 12px;background:var(--bar)}
+.bar-mark img{display:block;width:28px;height:28px}
+.appmenu{position:relative}
+.appmenu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;height:32px;padding:0 15px;border-radius:16px;background:var(--pill);border:1px solid #1a1a1a;color:#fff;font-weight:700;font-size:15px}
+.appmenu summary::-webkit-details-marker{display:none}
+.appmenu summary::after{content:"";width:7px;height:7px;margin-top:-4px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);transition:transform .15s}
+.appmenu[open] summary{background:var(--pill-hi)}
+.appmenu[open] summary::after{transform:translateY(4px) rotate(225deg)}
+.appmenu-list{position:absolute;top:40px;left:0;width:220px;padding:6px;border-radius:14px;background:#2B2D2F;box-shadow:0 12px 30px rgba(0,10,40,.45)}
+.appmenu-list a{display:block;padding:11px 12px;border-radius:9px;color:#fff;text-decoration:none}
+.appmenu-list a:hover{background:#44474a}
+
+.devicebar{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 16px 0}
+.app-device .devicebar{display:none}
+.features{font-size:14px;color:var(--soft);text-align:center}
+.features summary{cursor:pointer;padding:4px 8px}
+.feature-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:2px 16px;max-width:640px;padding:8px 0 4px;text-align:left}
+.feature-list label{display:flex;align-items:center;gap:8px;min-height:32px;color:var(--ink)}
+.feature-list input{width:18px;height:18px;accent-color:var(--blue)}
+.devices{display:inline-flex;padding:3px;border-radius:12px;background:var(--wash);max-width:100%}
+.devices button{font:700 14px/1 var(--sans);color:var(--soft);background:none;border:0;border-radius:9px;padding:9px 13px;cursor:pointer;white-space:nowrap}
+.devices button[aria-checked=true]{background:var(--blue);color:#fff}
+
+/* Home */
+.home{padding-bottom:32px}
+.justtype{max-width:1040px;margin:0 auto;padding:30px 20px 26px}
+#q{width:100%;border:0;background:none;color:var(--ink);font:300 clamp(40px,8vw,76px)/1.1 var(--sans);letter-spacing:-.02em;padding:0;outline:0;-webkit-appearance:none;appearance:none}
+#q::placeholder{color:var(--soft);opacity:.8}
+#q:focus-visible{box-shadow:0 3px 0 var(--blue)}
+.results{max-width:1040px;margin:0 auto;padding:0 20px}
+.results a{display:block;padding:13px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.results strong{display:block;font-weight:400;font-size:20px;line-height:1.25;color:var(--ink)}
+.results span{font-size:14.5px;color:var(--soft)}
+.none{color:var(--soft)}
+
+/* Getting started is webOS card view: real pages, shrunk, on the wallpaper */
+.cardview{background:var(--wall);padding:24px 0 32px;overflow:hidden}
+.cardview h2{max-width:1040px;margin:0 auto 18px;padding:0 20px;color:#fff;font-size:28px}
+.cards{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px max(20px,calc((100vw - 1000px)/2)) 12px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.5) transparent}
+.card{flex:0 0 236px;height:330px;scroll-snap-align:center;display:flex;flex-direction:column;background:#fff;color:#00123A;border-radius:18px;padding:0 16px 16px;text-decoration:none;overflow:hidden;box-shadow:0 14px 26px rgba(0,8,30,.42);transition:transform .16s ease-out}
+.card:hover{transform:translateY(-8px)}
+.card-bar{margin:12px -4px 16px;align-self:flex-start;padding:4px 11px;border-radius:12px;background:#3A3C3E;color:#fff;font-size:12.5px;font-weight:700}
+.card strong{font-weight:300;font-size:25px;line-height:1.14;letter-spacing:-.01em;margin-bottom:12px}
+.card-text{font-size:14px;line-height:1.45;color:#51617C;flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
+
+.card-art{flex:1;min-height:0;display:flex;justify-content:center;align-items:flex-end}
+.card-art img{max-width:100%;max-height:190px}
+[data-mode=tablet] .card-art[data-ui=tablet]{display:flex}
+[data-mode=tablet] .card-text[data-ui=tablet]{display:block}
+
+/* Topics follow Palm's eight groups as plain webOS list rows */
+.groups{max-width:1040px;margin:0 auto;padding:34px 20px 0;columns:3 280px;column-gap:40px}
+.groups section{break-inside:avoid;margin-bottom:30px}
+.groups h2{font-size:23px;margin-bottom:8px}
+.rows a{display:flex;align-items:center;gap:12px;min-height:48px;padding:6px 0;border-top:1px solid var(--rule);color:var(--ink);text-decoration:none}
+.rows a:hover{color:var(--link)}
+.rows img{width:32px;height:32px;object-fit:contain}
+
+/* Articles: the phone UI is one column, the tablet UI adds TouchPad's left pane */
+.layout{display:block}
+.rail{display:none}
+.article,.topic{max-width:680px;margin:0 auto;padding:22px 20px 40px}
+.article h1,.topic h1{font-size:clamp(32px,6vw,44px);letter-spacing:-.015em;margin:6px 0 20px}
+.topic h1{display:flex;align-items:center;gap:14px}
+.topic h1 img{width:44px;height:44px}
+.up{color:var(--soft);font-size:15px;text-decoration:none}
+.up::before{content:"";display:inline-block;width:7px;height:7px;margin-right:7px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-1px) rotate(45deg)}
+.topic-empty{color:var(--soft)}
+.topic-list h3{font-size:21px;margin:26px 0 6px}
+.topic-list a{display:block;padding:12px 0;border-top:1px solid var(--rule);color:var(--ink);text-decoration:none}
+.topic-list a:hover{color:var(--link)}
+.prose{max-width:62ch}
+.prose h2{font-size:25px;margin:28px 0 10px}
+.prose p{margin:0 0 12px}
+.prose ol,.prose ul{margin:0 0 16px;padding:0}
+.prose ul{padding-left:20px}
+.prose ol{list-style:none;counter-reset:s}
+.prose ol>li{counter-increment:s;position:relative;padding:0 0 14px 42px}
+.prose ol>li::before{content:counter(s);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;background:var(--wash);color:var(--link);font-weight:700;font-size:15px;line-height:28px;text-align:center}
+.prose li p{margin:0 0 6px}
+.prose table{border-collapse:collapse;margin:0 0 16px}
+.prose td,.prose th{padding:7px 12px 7px 0;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+.prose img{vertical-align:-5px}
+img.glyph{width:24px;height:24px;margin:0 2px}
+img.key{height:24px;width:24px;margin:0 2px}
+img.key.wide{width:42px}
+img.drawing{display:block;width:100%;max-width:400px;height:auto;margin:14px 0}
+.unchecked{margin:28px 0 0;padding-top:14px;border-top:1px solid var(--rule);color:var(--soft);font-size:15px}
+.for-note{color:var(--soft)}
+.foot{max-width:1040px;margin:0 auto;padding:20px;color:var(--soft);font-size:13.5px}
+.foot p{margin:0 0 5px;max-width:70ch}
+.foot a{color:inherit}
+
+/* The switch: tablet or phone text. Everything finer is data-if, applied in help.js */
+[hidden]{display:none!important}
+[data-ui=tablet]{display:none}
+[data-mode=tablet] [data-ui=phone]{display:none}
+[data-mode=tablet] [data-ui=tablet]{display:block}
+
+@media (min-width:900px){
+  [data-mode=tablet] .layout{display:grid;grid-template-columns:320px minmax(0,1fr);max-width:1180px;margin:0 auto;align-items:start}
+  [data-mode=tablet] .rail{display:block;position:sticky;top:44px;max-height:calc(100vh - 44px);overflow:auto;padding:14px 18px 30px;border-right:1px solid var(--rule)}
+  [data-mode=tablet] .article{max-width:none;margin:0;padding:18px 44px 40px}
+  [data-mode=tablet] .article .up{display:none}
+  .rail-head{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:300;color:var(--ink);text-decoration:none;margin-bottom:10px}
+  .rail-head img{width:32px;height:32px}
+  .rail h3{font-size:15px;font-weight:700;color:var(--soft);margin:16px 0 4px}
+  .rail a:not(.rail-head){display:block;padding:7px 10px;border-radius:9px;color:var(--ink);text-decoration:none;font-size:15px;line-height:1.3}
+  .rail a:not(.rail-head):hover{background:var(--wash)}
+  .rail a[aria-current]{background:var(--blue);color:#fff}
+}
+@media (max-width:400px){.devices button{padding:9px 9px;font-size:13px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
