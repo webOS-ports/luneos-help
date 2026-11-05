@@ -9,9 +9,10 @@
   "tablet"
  ],
  "origin": "palm/d500-01/41204",
- "status": "verified-device",
+ "status": "verified-source",
  "review": [],
  "evidence": [
+  "luneos-synergy-connectors/cloud/pigallery2/account/com.palm.pigallery2/com.palm.pigallery2.json (not on the MindPhone)",
   "/usr/palm/applications/org.webosports.app.photos/qml/main.qml:352",
   "/usr/palm/applications/org.webosports.app.photos/qml/main.qml:347",
   "adb: luna-send -n 1 luna://com.palm.service.accounts/listAccountTemplates {\"capability\":\"PHOTO.UPLOAD\"}",
@@ -25,4 +26,5 @@
 3. Sign in and follow the instructions on the screen.
 4. Go back to Photos & Videos. The account appears under **LIBRARIES**. To fetch its albums right away, open the **[Menu](/basics/open-the-application-menu)** and tap **Sync Now**.
 
-These accounts can hold pictures: Box, Dropbox, Flickr, HiDrive, kDrive, Koofr, MEGA, OneDrive, pCloud, S3 Storage and Yandex Disk.
+{if:unreleased}These accounts can hold pictures: Box, Dropbox, Flickr, HiDrive, kDrive, Koofr, MEGA, OneDrive, pCloud, S3 Storage and Yandex Disk. On newer LuneOS builds you can also add your own PiGallery2 server ([learn how](/photos/look-at-photos-on-a-pigallery2-server)).
+{if:!unreleased}These accounts can hold pictures: Box, Dropbox, Flickr, HiDrive, kDrive, Koofr, MEGA, OneDrive, pCloud, S3 Storage and Yandex Disk.

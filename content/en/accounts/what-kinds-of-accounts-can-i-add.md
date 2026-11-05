@@ -9,14 +9,20 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "verified-device",
+ "status": "verified-source",
  "evidence": [
   "adb: luna-send -n 1 luna://com.palm.service.accounts/listAccountTemplates '{}' (both devices, 37 templates, same ids)",
   "productivity-apps/mindphone/accounts-lib/source/add-account.js:71-88 (groups, order)",
   "productivity-apps/mindphone/accounts-lib/source/util.js:25 (hidden and validator-less templates left out)",
   "adb: ls /usr/share/luna-service2/services.d: com.palm.imap, pop and smtp only, no EAS service",
   "/usr/palm/applications/com.palm.app.email/accounts/source/ManualConfig.js:57 (EAS commented out)",
-  "/usr/palm/applications/com.palm.app.email/accounts/source/AccountWizard.js:1720 (Gmail in the Email Account table)"
+  "/usr/palm/applications/com.palm.app.email/accounts/source/AccountWizard.js:1720 (Gmail in the Email Account table)",
+  "luneos-synergy-connectors/music/subsonic/account/org.webosports.app.music.subsonic/org.webosports.app.music.subsonic.json",
+  "luneos-synergy-connectors (branch herrie/music-video-sources) music/radio/account/org.webosports.app.music.radio/org.webosports.app.music.radio.json",
+  "luneos-synergy-connectors/cloud/pigallery2/account/com.palm.pigallery2/com.palm.pigallery2.json",
+  "luneos-synergy-connectors video/*/account/*/*.json (jellyfin, emby, plex, peertube, upnp, m3u on main; archive, mediathek, owncast on herrie/music-video-sources)",
+  "enyo-1.0-ports/framework/lib/accounts/source/add-account.js:71 (capability Video has no heading: OTHER)",
+  "adb: ls /usr/palm/public/accounts on the MindPhone (none of these templates)"
  ],
  "review": []
 }
@@ -35,6 +41,12 @@
 | | Google Drive | Files |
 | | Flickr | Photos |
 | **MUSIC** | Apple Music, Deezer, Internet Archive, Jamendo, Qobuz, SoundCloud, Spotify, Tidal | Music |
+
+{if:unreleased}**On newer LuneOS builds** you can also add these. Some devices don't have them yet.
+
+{if:unreleased}- Under **MUSIC**: Subsonic, for your own music server, and Internet Radio ([**learn how**](/music/stream-music)).
+{if:unreleased}- Under **CLOUD & PHOTOS**: PiGallery2, for the photos on your own gallery server ([**learn how**](/photos/look-at-photos-on-a-pigallery2-server)).
+{if:unreleased}- Under **OTHER**: Jellyfin, Emby, Plex, PeerTube, Media Servers (UPnP/DLNA), M3U Playlist, Internet Archive, Mediathek and Owncast, for Videos ([**learn how**](/videos/add-a-media-server-account)).
 
 **Google:** Each Google service is a separate account. Use **Email Account** for Gmail, **Google C+DAV** for contacts and calendars, **Google Drive** for files, and **Google Chat** for messaging.
 

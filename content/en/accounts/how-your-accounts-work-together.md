@@ -9,14 +9,15 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "verified-device",
+ "status": "verified-source",
  "evidence": [
   "adb: luna-send -n 1 luna://com.palm.service.accounts/listAccountTemplates '{}' (both devices, 37 templates, same ids)",
   "productivity-apps/mindphone/accounts-lib/source/accounts-list.js:136-143 (per-kind groups under the list title)",
   "/usr/palm/applications/com.palm.app.accounts/source/AccountManager.js:59 (SYNERGY ACCOUNTS)",
   "productivity-apps/mindphone/accounts-lib/source/modify.js:34 (USE ACCOUNT WITH)",
   "/usr/palm/applications/org.webosports.app.documents/source/services/CloudService.js (reads DOCUMENTS accounts)",
-  "/usr/palm/services/com.palm.service.photos/lib/capabilities.js (PHOTO.UPLOAD accounts)"
+  "/usr/palm/services/com.palm.service.photos/lib/capabilities.js (PHOTO.UPLOAD accounts)",
+  "org.webosports.app.videoplayer/qml/components/SourceBar.qml:63 (This Device, then each server of the accounts)"
  ],
  "review": []
 }
@@ -30,6 +31,7 @@ You don't need a separate app for each online service. Add an account once, and 
 - **Messaging:** Your conversations from chat accounts appear in Messaging ([**learn how**](/messaging/set-up-an-im-account)).
 - **Documents and Photos & Videos:** Files and pictures from your cloud accounts appear in these apps.
 - **Music:** Play music from your streaming accounts ([**learn how**](/music/stream-music)).
+{if:unreleased}- **Videos:** On newer LuneOS builds, watch the videos on your media servers and TV channels from your lists in Videos, beside the videos on your device ([**learn how**](/videos/watch-videos-from-a-media-server)).
 
 Accounts keeps all of this in one place. Your online accounts are listed under **SYNERGY ACCOUNTS**, sorted by kind. Tap an account to choose which apps use it under **USE ACCOUNT WITH** ([**learn how**](/accounts/use-the-accounts-application-to-edit-or-delete-an-online-account)).
 

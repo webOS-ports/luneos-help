@@ -22,7 +22,10 @@
   "luneos-synergy-connectors/music/_core/librespot/README.md:9 (Spotify Premium mandatory)",
   "adb: GET 127.0.0.1:8730/providers on both devices (archive, deezer, jamendo, soundcloud, youtube; the MindPhone also qobuz, spotify, tidal)",
   "adb: ls /usr/palm/public/accounts on both devices (apple, archive, deezer, jamendo, qobuz, soundcloud, spotify, tidal)",
-  "adb: ls /etc/spotify-webos, /media/internal/device.wvd (TouchPad: no client id; neither device: no device.wvd)"
+  "adb: ls /etc/spotify-webos, /media/internal/device.wvd (TouchPad: no client id; neither device: no device.wvd)",
+  "luneos-synergy-connectors/music/subsonic/account/org.webosports.app.music.subsonic/org.webosports.app.music.subsonic.json",
+  "luneos-synergy-connectors (branch herrie/music-video-sources) music/radio/account/org.webosports.app.music.radio/org.webosports.app.music.radio.json",
+  "adb: ls /usr/palm/public/accounts on the MindPhone (no subsonic or radio template)"
  ],
  "review": []
 }
@@ -43,8 +46,13 @@ If **Streaming** is not one of Music's categories, the music streaming service i
 | Tidal | A Tidal plan with lossless sound | Yes, sign in |
 | Qobuz | A Qobuz plan with lossless sound | Yes, sign in |
 | Apple Music | An Apple Music subscription and an extra file on your device | Yes, sign in |
+{if:unreleased}| Subsonic | Your own music server: Navidrome, Airsonic, Gonic or another that speaks the Subsonic API | Yes, sign in |
+{if:unreleased}| Internet Radio | Nothing | Yes, no sign-in |
 
-To start, see [Add a streaming service](/music/add-a-streaming-service), then [Play from a streaming service](/music/play-from-a-streaming-service).
+{if:unreleased}Subsonic and Internet Radio need a newer LuneOS build than some devices have.
+
+{if:unreleased}To start, see [Add a streaming service](/music/add-a-streaming-service), then [Play from a streaming service](/music/play-from-a-streaming-service). For your own server, see [Play music from your Subsonic server](/music/play-music-from-your-subsonic-server). For radio, see [Listen to internet radio](/music/listen-to-internet-radio).
+{if:!unreleased}To start, see [Add a streaming service](/music/add-a-streaming-service), then [Play from a streaming service](/music/play-from-a-streaming-service).
 
 **Limits**
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the help site from content/en. usage: build.py <repo-dir> [out-dir] [--app]"""
+"""Build the help site from content/en. usage: build.py <repo-dir> [out-dir] [--app] [--unreleased]"""
 import html
 import json
 import pathlib
@@ -25,6 +25,7 @@ FEATURES = [
     ("brightness", "Adjustable brightness", "adjustable brightness"),
 ]
 PHRASE = {k: v for k, _, v in FEATURES} | {"tablet": "a tablet layout"}
+RELEASE = re.compile(r"^\{if:(!?)unreleased\}")
 COND = re.compile(r"^\s*\{if:([a-z!,]+)\}\s*")
 NOTICE = ("Adapted from the Palm and HP webOS Help, preserved by "
           '<a href="https://www.webosarchive.org/">webOS Archive</a>. '
@@ -79,17 +80,34 @@ def needs(conds):
 
 
 class Site:
-    def __init__(self, repo, out, app=False):
-        self.repo, self.out, self.app = repo, out, app
+    def __init__(self, repo, out, app=False, unreleased=False):
+        self.repo, self.out, self.app, self.unreleased = repo, out, app, unreleased
         self.toc = json.loads((repo / "content/en/toc.json").read_text())
         self.articles = []
         for p in (repo / "content/en").glob("*/*.md"):
             meta, body = parse(p)
             self.articles.append({"meta": meta, "body": body})
+        self.held = {a["meta"]["id"] for a in self.articles if a["meta"].get("status") == "unreleased"}
+        if not unreleased:
+            # Features no LuneOS build ships yet stay out of the published help.
+            self.articles = [a for a in self.articles if a["meta"]["id"] not in self.held]
+            self.held_count = len(self.held)
+        for a in self.articles:
+            a["body"] = self.release_lines(a["body"])
         self.articles.sort(key=lambda a: a["meta"]["order"])
         self.byid = {a["meta"]["id"]: a for a in self.articles}
         self.art = {}
         self.broken = []
+
+    def release_lines(self, body):
+        """Lines marked {if:unreleased} or {if:!unreleased} are kept for one build or the other."""
+        out = []
+        for line in body.split("\n"):
+            m = RELEASE.match(line)
+            if m and (m[1] == "!") == self.unreleased:
+                continue
+            out.append(line[m.end():] if m else line)
+        return "\n".join(out)
 
     def page(self, depth, title, main, cls=""):
         root = "../" * depth
@@ -134,9 +152,16 @@ class Site:
             target = m[1].strip("/")
             if target in self.byid:
                 return f"]({root}{target}.html)"
+            if target in self.held:
+                return "](#held)"
             self.broken.append(("link", target))
             return f"]({root}index.html)"
         md = re.sub(r"\]\(/([a-z0-9-]+/[a-z0-9-]+)(?: \"[^\"]*\")?\)", link, md)
+        md = re.sub(r"\[([^\]]*)\]\(#held\)", r"\1", md)  # a link to a held page keeps its words
+        # Sub-lists and step paragraphs are written with 2 or 3 spaces; Python-Markdown nests only at 4.
+        md = re.sub(r"^ {2,3}(?=\S)", "    ", md, flags=re.M)
+        # A step straight after an indented paragraph would be folded into it.
+        md = re.sub(r"^( {4}\S.*)\n(?=(?:[-*]|\d+\.) )", r"\1\n\n", md, flags=re.M)
         out = markdown.markdown(md, extensions=["tables", "sane_lists"])
         soup = BeautifulSoup(out, "html.parser")
         for stray in soup.find_all(string=lambda x: "**" in x):  # unbalanced bold in Palm's markup
@@ -258,6 +283,7 @@ class Site:
         self.write("legacy-map.json", json.dumps(self.toc["legacy"], indent=1) + "\n")
         for f, svg in self.art.items():
             self.write("art/" + f, svg)
+        print("held back as unreleased", 0 if self.unreleased else len(self.held))
         print("pages", len(self.articles), "art", len(self.art), "broken", len(self.broken), self.broken[:10])
         print("conditional blocks", sum(p.read_text().count("data-if=") for p in self.out.glob("*/*.html")))
 
@@ -299,10 +325,10 @@ class Site:
 
 
 def main():
-    args = [x for x in sys.argv[1:] if x != "--app"]
+    args = [x for x in sys.argv[1:] if not x.startswith("--")]
     repo = pathlib.Path(args[0])
     out = pathlib.Path(args[1]) if len(args) > 1 else repo / "dist"
-    Site(repo, out, app="--app" in sys.argv).build()
+    Site(repo, out, app="--app" in sys.argv, unreleased="--unreleased" in sys.argv).build()
 
 
 main()
