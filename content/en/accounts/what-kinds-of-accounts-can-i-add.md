@@ -11,6 +11,7 @@
  "origin": "luneos",
  "status": "verified-source",
  "evidence": [
+  "luneos-synergy-connectors/cloud/{immich,photoprism,smugmug}/account (PHOTO.UPLOAD), cloud/webdav/account/com.palm.webdav.json (DOCUMENTS, PHOTO.UPLOAD), im/signal/account/com.palm.signal",
   "adb: luna-send -n 1 luna://com.palm.service.accounts/listAccountTemplates '{}' (both devices, 37 templates, same ids)",
   "productivity-apps/mindphone/accounts-lib/source/add-account.js:71-88 (groups, order)",
   "productivity-apps/mindphone/accounts-lib/source/util.js:25 (hidden and validator-less templates left out)",
@@ -35,11 +36,12 @@
 | **EMAIL** | Email Account | Email from IMAP and POP services |
 | **CONTACTS & CALENDAR** | C+DAV Connector, Google C+DAV, iCloud C+DAV, Yahoo C+DAV | Contacts and calendars ([**learn how**](/calendar/set-up-a-c-dav-account)) |
 | **MESSAGING & CHAT** | Discord, Facebook (E2EE), Google Chat | Messaging and contacts |
-| | Teams, Telegram, WhatsApp | Messaging, contacts, and calls |
+| | Signal, Teams, Telegram, WhatsApp | Messaging, contacts, and voice and video calls |
 | | Jabber, Matrix | Messaging |
 | **CLOUD & PHOTOS** | Box, Dropbox, HiDrive, kDrive, Koofr, MEGA, OneDrive, pCloud, S3 Storage, Yandex Disk | Files and photos |
 | | Google Drive | Files |
-| | Flickr | Photos |
+| | Flickr, Immich, PhotoPrism, SmugMug | Photos |
+| | WebDAV / Nextcloud | Files and photos |
 | **MUSIC** | Apple Music, Deezer, Internet Archive, Jamendo, Qobuz, SoundCloud, Spotify, Tidal | Music |
 
 **On newer LuneOS builds** you can also add these. Some devices don't have them yet.

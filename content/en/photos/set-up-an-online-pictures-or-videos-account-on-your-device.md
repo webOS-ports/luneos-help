@@ -26,4 +26,4 @@
 3. Sign in and follow the instructions on the screen.
 4. Go back to Photos & Videos. The account appears under **LIBRARIES**. To fetch its albums right away, open the **[Menu](/basics/open-the-application-menu)** and tap **Sync Now**.
 
-These accounts can hold pictures: Box, Dropbox, Flickr, HiDrive, kDrive, Koofr, MEGA, OneDrive, pCloud, S3 Storage and Yandex Disk. On newer LuneOS builds you can also add your own PiGallery2 server ([learn how](/photos/look-at-photos-on-a-pigallery2-server)).
+These accounts can hold pictures: Box, Dropbox, Flickr, HiDrive, Immich, kDrive, Koofr, MEGA, OneDrive, pCloud, PhotoPrism, S3 Storage, SmugMug, WebDAV / Nextcloud and Yandex Disk. On newer LuneOS builds you can also add your own PiGallery2 server ([learn how](/photos/look-at-photos-on-a-pigallery2-server)).
