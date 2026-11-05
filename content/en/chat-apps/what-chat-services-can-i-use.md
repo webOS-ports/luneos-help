@@ -26,6 +26,7 @@ Chat services work inside Messaging. They have no icons of their own in the Laun
 
 - [Telegram](/chat-apps/set-up-telegram)
 - [WhatsApp](/chat-apps/set-up-whatsapp)
+- [Signal](/chat-apps/set-up-signal)
 - [Discord](/chat-apps/set-up-discord)
 - [Teams](/chat-apps/set-up-teams)
 - [Google Chat](/chat-apps/set-up-google-chat)
@@ -34,4 +35,4 @@ Chat services work inside Messaging. They have no icons of their own in the Laun
 
 Once an account is set up, you use it as you do any IM account ([learn how](/messaging/send-and-receive-im-messages)). To remove one, see [Delete an IM account](/messaging/delete-an-im-account).
 
-Telegram, WhatsApp, and Teams can also make voice calls ([learn how](/chat-apps/call-someone-over-a-chat-account)).
+Telegram, WhatsApp, Teams, and Signal can also make voice and video calls ([learn how](/chat-apps/call-someone-over-a-chat-account)).
