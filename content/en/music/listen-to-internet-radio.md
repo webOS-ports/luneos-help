@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "luneos-synergy-connectors (branch herrie/music-video-sources) music/radio/account/org.webosports.app.music.radio/org.webosports.app.music.radio.json (loc_name Internet Radio, capability Music)",
   "luneos-synergy-connectors (branch herrie/music-video-sources) music/_core/apps/org.webosports.app.musicauth/source/musicAuth.js:190 (Add Internet Radio)",

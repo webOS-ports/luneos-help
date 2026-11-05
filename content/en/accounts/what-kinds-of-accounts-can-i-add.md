@@ -42,11 +42,11 @@
 | | Flickr | Photos |
 | **MUSIC** | Apple Music, Deezer, Internet Archive, Jamendo, Qobuz, SoundCloud, Spotify, Tidal | Music |
 
-{if:unreleased}**On newer LuneOS builds** you can also add these. Some devices don't have them yet.
+**On newer LuneOS builds** you can also add these. Some devices don't have them yet.
 
-{if:unreleased}- Under **MUSIC**: Subsonic, for your own music server, and Internet Radio ([**learn how**](/music/stream-music)).
-{if:unreleased}- Under **CLOUD & PHOTOS**: PiGallery2, for the photos on your own gallery server ([**learn how**](/photos/look-at-photos-on-a-pigallery2-server)).
-{if:unreleased}- Under **OTHER**: Jellyfin, Emby, Plex, PeerTube, Media Servers (UPnP/DLNA), M3U Playlist, Internet Archive, Mediathek and Owncast, for Videos ([**learn how**](/videos/add-a-media-server-account)).
+- Under **MUSIC**: Subsonic, for your own music server, and Internet Radio ([**learn how**](/music/stream-music)).
+- Under **CLOUD & PHOTOS**: PiGallery2, for the photos on your own gallery server ([**learn how**](/photos/look-at-photos-on-a-pigallery2-server)).
+- Under **OTHER**: Jellyfin, Emby, Plex, PeerTube, Media Servers (UPnP/DLNA), M3U Playlist, Internet Archive, Mediathek and Owncast, for Videos ([**learn how**](/videos/add-a-media-server-account)).
 
 **Google:** Each Google service is a separate account. Use **Email Account** for Gmail, **Google C+DAV** for contacts and calendars, **Google Drive** for files, and **Google Chat** for messaging.
 

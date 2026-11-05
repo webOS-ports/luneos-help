@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "luneos-synergy-connectors/video/m3u/account/org.webosports.video.m3u/org.webosports.video.m3u.json (loc_name M3U Playlist)",
   "luneos-synergy-connectors/video/_core/apps/org.webosports.app.videoauth/source/videoAuth.js:68",

@@ -24,8 +24,7 @@
 }
 ---
 
-{if:unreleased}This isn't in every copy of Music. It works with Spotify, Tidal, Qobuz and Deezer, and on newer LuneOS builds with Subsonic and Internet Radio. From Deezer you see your public playlists and your favorite tracks. Internet Radio's playlists are lists of stations ([learn how](/music/listen-to-internet-radio)).
-{if:!unreleased}This isn't in every copy of Music. It works with Spotify, Tidal, Qobuz and Deezer. From Deezer you see your public playlists and your favorite tracks.
+This isn't in every copy of Music. It works with Spotify, Tidal, Qobuz and Deezer, and on newer LuneOS builds with Subsonic and Internet Radio. From Deezer you see your public playlists and your favorite tracks. Internet Radio's playlists are lists of stations ([learn how](/music/listen-to-internet-radio)).
 
 1. **[Open](/basics/open-an-application-in-the-launcher) Music** > tap **Playlists**.
 2. Scroll past **YOUR PLAYLISTS**. Each service has its own heading, with the playlists you have there.

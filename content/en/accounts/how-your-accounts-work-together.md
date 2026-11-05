@@ -31,7 +31,7 @@ You don't need a separate app for each online service. Add an account once, and 
 - **Messaging:** Your conversations from chat accounts appear in Messaging ([**learn how**](/messaging/set-up-an-im-account)).
 - **Documents and Photos & Videos:** Files and pictures from your cloud accounts appear in these apps.
 - **Music:** Play music from your streaming accounts ([**learn how**](/music/stream-music)).
-{if:unreleased}- **Videos:** On newer LuneOS builds, watch the videos on your media servers and TV channels from your lists in Videos, beside the videos on your device ([**learn how**](/videos/watch-videos-from-a-media-server)).
+- **Videos:** On newer LuneOS builds, watch the videos on your media servers and TV channels from your lists in Videos, beside the videos on your device ([**learn how**](/videos/watch-videos-from-a-media-server)).
 
 Accounts keeps all of this in one place. Your online accounts are listed under **SYNERGY ACCOUNTS**, sorted by kind. Tap an account to choose which apps use it under **USE ACCOUNT WITH** ([**learn how**](/accounts/use-the-accounts-application-to-edit-or-delete-an-online-account)).
 

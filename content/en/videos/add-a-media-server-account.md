@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "luneos-synergy-connectors/video/_core/apps/org.webosports.app.videoauth/source/videoAuth.js:38",
   "luneos-synergy-connectors/video/_core/apps/org.webosports.app.videoauth/source/videoAuth.js:44",

@@ -35,10 +35,10 @@ For a few seconds you can tap **Start over** to go back to the beginning.
 
 Tap and hold a video for **Play from the Start** or **Remove from Continue Watching**.
 
-{if:unreleased}**Videos from your media servers**
+**Videos from your media servers**
 
-{if:unreleased}On a newer LuneOS build, **Continue Watching** also lists what you stopped on your Jellyfin, Emby and Plex servers ([learn how](/videos/add-a-media-server-account)), next to your device's videos. It shows eight videos at most.
+On a newer LuneOS build, **Continue Watching** also lists what you stopped on your Jellyfin, Emby and Plex servers ([learn how](/videos/add-a-media-server-account)), next to your device's videos. It shows eight videos at most.
 
-{if:unreleased}Tap and hold a server's video for **Play**, **Play from the Start** or **Show on Its Server**. You can't remove a server's video from the list in Videos: the server keeps its own list.
+Tap and hold a server's video for **Play**, **Play from the Start** or **Show on Its Server**. You can't remove a server's video from the list in Videos: the server keeps its own list.
 
-{if:unreleased}Continue Watching isn't shown when Videos lists your videos as a grid of pictures, as it does on a wide screen.
+Continue Watching isn't shown when Videos lists your videos as a grid of pictures, as it does on a wide screen.

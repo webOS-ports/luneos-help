@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "luneos-synergy-connectors (branch herrie/music-video-sources) video/mediathek/account/org.webosports.video.mediathek/org.webosports.video.mediathek.json (loc_name Mediathek)",
   "luneos-synergy-connectors (branch herrie/music-video-sources) video/_core/apps/org.webosports.app.videoauth/source/videoAuth.js:76",

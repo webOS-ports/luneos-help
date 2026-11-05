@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "luneos-synergy-connectors (branch herrie/music-video-sources) music/_core/apps/org.webosports.app.musicauth/source/musicAuth.js:92 (YOUR STATION LIST (OPTIONAL))",
   "luneos-synergy-connectors (branch herrie/music-video-sources) music/_core/apps/org.webosports.app.musicauth/source/musicAuth.js:287",

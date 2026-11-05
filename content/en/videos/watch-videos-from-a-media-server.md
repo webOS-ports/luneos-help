@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "org.webosports.app.videoplayer/qml/components/SourceBar.qml:63",
   "org.webosports.app.videoplayer/qml/components/SourceBar.qml:77",

@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "luneos-synergy-connectors/music/subsonic/account/org.webosports.app.music.subsonic/org.webosports.app.music.subsonic.json (loc_name Subsonic, capability Music)",
   "luneos-synergy-connectors/music/_core/apps/org.webosports.app.musicauth/source/musicAuth.js:75",

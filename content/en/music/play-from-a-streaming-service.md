@@ -24,8 +24,7 @@
 ---
 
 1. **[Open](/basics/open-an-application-in-the-launcher) Music** > tap **Streaming**.
-{if:unreleased}2. Tap a service. A Subsonic server opens on its albums and artists instead: tap **Search Subsonic** there ([learn how](/music/play-music-from-your-subsonic-server)).
-{if:!unreleased}2. Tap a service.
+2. Tap a service. A Subsonic server opens on its albums and artists instead: tap **Search Subsonic** there ([learn how](/music/play-music-from-your-subsonic-server)).
 3. Type what you are looking for. Results appear after a moment.
 4. Do one of the following:
    - To play a song: Tap it. The songs in the results after it play next.

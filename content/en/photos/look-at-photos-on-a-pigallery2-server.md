@@ -9,7 +9,7 @@
   "tablet"
  ],
  "origin": "luneos",
- "status": "unreleased",
+ "status": "needs-device-test",
  "evidence": [
   "luneos-synergy-connectors/cloud/pigallery2/account/com.palm.pigallery2/com.palm.pigallery2.json (loc_name PiGallery2, PHOTO.UPLOAD only)",
   "luneos-synergy-connectors/cloud/pigallery2/apps/com.palm.app.pigallery2-auth/source/pigallery2Auth.js:22",
